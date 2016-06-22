@@ -1,0 +1,926 @@
+//- Use the presentation layout so we can keep this clean
+extends layouts/presentation
+
+//- Customize the title, meta description, and author using this block.
+block title
+  title How to Make It (From Anywhere)
+  meta(
+    name="description"
+    content="TKTK(description)"
+  )
+  meta(name="author" content="Jason Lengstorf")
+
+block theme
+  link(rel="stylesheet" href="css/theme/lengstorf.css" id="template")
+
+block styles
+  //- Font Awesome for icons
+  link(
+    rel="stylesheet"
+    href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+  )
+
+  //- Typography.com (because Everything Is Better With Gotham™)
+    link(
+      rel="stylesheet"
+      href="//cloud.typography.com/6102252/617726/css/fonts.css"
+    )
+
+
+//- Add your slides here. See templates/includes/_mixins.jade for information
+//- on how `+slide` works.
+block slides
+  //-
+    Add basic info about the presentation. This needs to be added inside the
+    `slides` block or Jade won't see the variables and things get confusing.
+  - var title = 'How to Make It (From Anywhere)';
+  - var metaDescription = 'TKTK(description)';
+  - var author = 'Jason Lengstorf';
+  - var authorLink = 'http://lengstorf.com/';
+  - var authorEmail = 'jason@lengstorf.com';
+  - var twitterHandle = 'jlengstorf';
+  - var githubHandle = 'jlengstorf';
+  - var hashtag = 'PHPSevilla';
+  - var twitterLink = 'http://jlengstorf.github.io/happy-people-do-it-better/'
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h1 How to 
+      em Make It
+    h3 (From Anywhere in the World)
+
+    p Critical Non-Technical Skills for Remote Workers
+
+
+    p by #[a(href=authorLink)= author]
+      br
+      small
+        a(href="https://twitter.com/" + twitterHandle)= twitterHandle
+        |  |&nbsp;
+        a(href="mailto:" + authorEmail)= authorEmail
+
+
+  //---------------------------------------------------------------------------
+
+  +slide.push-right.light-text(data-background="url(img/jason-lengstorf.jpg)")
+    h1.pushed-right Who Am I?
+    ul.pushed-right
+      li.fragment Designer, developer, and web strategist since 2003.
+      li.fragment Consultant for startups, agencies, and corporations.
+      li.fragment Author of 3 books on nerd shit: PHP, jQuery, WebRTC.
+      li.fragment Traveler with no permanent home address since 2014.
+      li.fragment Propagandist for the Post-Hustle Movement.
+
+    aside.notes
+      p
+        strong What is Post-Hustle?
+        |  It’s the pursuit of a life where work is a tool to create a better 
+        | life, not the only reason to be alive.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 Living the Dream:
+    h1
+      strong.hugify Remote Work
+
+
+  //---------------------------------------------------------------------------
+
+  +slide(data-background="url(img/dnporn.jpg)")
+    .image-credit( data-credit-type="Photos" )
+      a.image-credit__link(
+        href="https://www.instagram.com/workhardanywhere/"
+      ) Work Hard Anywhere
+
+    aside.notes
+      p We’ve all seen the photos and heard the promises: work from anywhere! on a beach! at home! in the coffee shop! at the park! in your pajamas! with NO PANTS ON!
+
+
+  //---------------------------------------------------------------------------
+
+  +slide(data-background="url(img/dn-beach.jpg)")
+
+    aside.notes
+      p We’ve all seen the photos and heard the promises: work from anywhere! on a beach! at home! in the coffee shop! at the park! in your pajamas! with NO PANTS ON!
+
+
+  //---------------------------------------------------------------------------
+
+  +slide(data-background="url(img/dn-home.jpg)")
+    .image-credit( data-credit-type="Photo" )
+      a.image-credit__link(
+        href="https://unsplash.com/@nickturner"
+      ) Nick Turner
+
+    aside.notes
+      p We’ve all seen the photos and heard the promises: work from anywhere! on a beach! at home! in the coffee shop! at the park! in your pajamas! with NO PANTS ON!
+
+
+  //---------------------------------------------------------------------------
+
+  +slide(data-background="url(img/dn-coffee-shop.jpg)")
+    .image-credit( data-credit-type="Photo" )
+      a.image-credit__link(
+        href="https://unsplash.com/@herlifeinpixels"
+      ) Hannah Wei
+
+    aside.notes
+      p We’ve all seen the photos and heard the promises: work from anywhere! on a beach! at home! in the coffee shop! with NO PANTS ON!
+
+
+  //---------------------------------------------------------------------------
+
+  +slide(data-background="url(img/no-pants.gif)")
+    .image-credit( data-credit-type="Photo" )
+      a.image-credit__link(
+        href="http://www.imdb.com/title/tt0105958/"
+      ) Boy Meets World
+
+    aside.notes
+      p We’ve all seen the photos and heard the promises: work from anywhere! on a beach! at home! in the coffee shop! with NO PANTS ON!
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 I’ve been 
+      br
+      em location-independent
+      br
+      | for over a decade.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide.light-text( data-background="url(img/selfie-paris.jpg)" )
+    h2 #exactsameselfie
+    p &nbsp;
+    aside.notes
+      p This is how my girlfriend Marisa and I have been able to take the exact same selfie in dozens of cities around the world.
+
+  +slide.light-text( data-background="url(img/selfie-krka.jpg)" )
+    h2 #exactsameselfie
+    p &nbsp;
+    aside.notes
+      p This is how my girlfriend Marisa and I have been able to take the exact same selfie in dozens of cities around the world.
+
+  +slide.light-text( data-background="url(img/selfie-rome.jpg)" )
+    h2 #exactsameselfie
+    p &nbsp;
+    aside.notes
+      p This is how my girlfriend Marisa and I have been able to take the exact same selfie in dozens of cities around the world.
+
+  +slide.light-text( data-background="url(img/selfie-pompeii.jpg)" )
+    h2 #exactsameselfie
+    p &nbsp;
+    aside.notes
+      p This is how my girlfriend Marisa and I have been able to take the exact same selfie in dozens of cities around the world.
+
+  +slide.light-text( data-background="url(img/selfie-annecy.jpg)" )
+    h2 #exactsameselfie
+    p &nbsp;
+    aside.notes
+      p This is how my girlfriend Marisa and I have been able to take the exact same selfie in dozens of cities around the world.
+
+  +slide.light-text( data-background="url(img/selfie-sevilla.jpg)" )
+    h2 #exactsameselfie
+    p (We took this #[em today].)
+    aside.notes
+      p This is how my girlfriend Marisa and I have been able to take the exact same selfie in dozens of cities around the world.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h3 So in short&hellip;
+    h2.fragment Life is #[strong fucking awesome].
+    ul.align-center
+      li.fragment I make enough to live well and build my savings.
+      li.fragment I spend less than 40 hours each week looking at a computer.
+      li.fragment I only have one meeting every couple of weeks or so.
+      li.fragment I live 1–2 months in a city, then pack up to find a new adventure.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 This is possible because
+      br
+      | I’m a 
+      em remote worker
+      | .
+    ul
+      li.fragment I work on big projects with long timelines.
+      li.fragment I only need to have meetings about big milestones.
+      li.fragment I’m measured by results, not time.
+
+    aside.notes
+      p I still check in frequently, but my #[em meetings] are only set up when a major milestone passes.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    p (This wasn’t always the case, though.)
+
+    aside.notes
+      p I used to struggle some months, and I rarely had enough left over to actually save anything. I was a good developer and a good designer — but I hadn’t learned yet that being good at the hard skills wasn’t enough to make it as a remote freelancer. I needed to build soft skills — and that’s what I’m talking about today.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h3 So if remote work is so great&hellip;
+    h1.fragment
+      span.hugify.alright-calm-down-a-little Why Isn’t
+      strong.hugify.alright-calm-down-a-little Everyone
+      span.hugify doing it?
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 The First Hurdle:
+    h1
+      em Management
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 Many companies are #[strong afraid] to let employees out of their sight.
+
+    aside.notes
+      p They worry that employees who aren’t on-site may slack off or otherwise fail to perform their jobs properly.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    p (This is a #[em deeply misinformed] fear.)
+
+    aside.notes
+      p Research has actually shown that workers are #[em more] productive when they work from home — not to mention more satisfied with their work and happier overall in their lives. But that’s getting off the point a bit.
+      p While sometimes it’s just not possible to convince your boss, in most cases you can convince your boss to at least let you try — assuming you've got your bases covered ahead of time. (Which is what we’re going to cover in the rest of this presentation.)
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h3 Bosses are a convenient excuse.
+      br
+      | They’re #[strong not] the biggest hurdle.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h1 Each of us is 
+      em.hugify Our Own
+      |  biggest hurdle.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 To work remotely, it’s 
+      strong.hugify not enough
+      | to be simply a designer
+      br
+      | or a developer.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 We have to be #[em managers], #[em communicators], and #[em promoters] as well.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h3 How to #[em Get Gone], Part I:
+    h1
+      span.hugify Self-
+      | Management
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 In an office, we have #[strong.hugify external] accountability.
+
+    aside.notes
+      p If we work on a team in an office, there are people around — both managers and coworkers — whose mere presence is a reminder that we’re supposed to be accomplishing things. Coupled with a manager’s role of checking in, we have a huge disincentive to screw around.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 Working remotely, you’re the #[em.hugify only source] of accountability.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h3 Remote workers must be able to keep themselves accountable to:
+    ul.align-center
+      li.fragment Stay on task.
+      li.fragment Keep focused.
+      li.fragment Ask for help.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 Self-management means:
+    ol
+      li.fragment
+        strong Excellent time management skills.
+        |  You know how to push through procrastination and hit deadlines.
+      li.fragment
+        strong Laser focus.
+        |  You’re crystal clear on your priority, and work to create a distraction-free environment where you can focus completely.
+      li.fragment
+        strong Excellent problem-solving skills.
+        |  You may not know all the answers, but you #[em do] have every confidence that you can figure things out.
+      li.fragment
+        strong Humility.
+        |  You don’t need to be the smartest person in the room. If you know someone on the team can help, you ask.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 Good time management 
+      span.hugify isn’t magic.
+    ul
+      li.fragment
+        strong Try to work #[em with] willpower instead of against it. 
+        |  Do the most demanding tasks early in the day when you have the most energy.
+      li.fragment
+        strong Make time to plan.
+        |  Work backwards from the ideal final product and create steps. Don’t stop until each step is an hour or two long.
+      li.fragment
+        strong Only tackle one major todo per day.
+        |  Accomplishing two things is really encouraging if you only plan to do one; it’s crushing if you planned for three.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 Staying Focused 
+      em.hugify Is Simple.
+      |  (But not easy.)
+    ul
+      li.fragment
+        strong Use a timer.
+        |  Racing the clock helps keep motivation high, and creates healthy pressure to finish on time.
+      li.fragment
+        strong Go ghost.
+        |  When the timer is running, put your phone in airplane mode, close email, and free yourself to focus.
+      li.fragment
+        strong Find your happy place.
+        |  Experiment with different environments — coffee shops, home offices, coworking spaces, etc. — until you find what works best for you.
+
+    aside.notes
+      p Turning off notifications is #[em really] stressful at first. We’ve all been conditioned to use our phones like a morphine drip – cutting off that supply of endorphins is hard to do. But remember: since you’re using a timer, you know you’ll be connected again in a short time.
+      p Each of us has an optimal working environment. Some people do really well with the murmur of people talking in a coffee shop. Others need the silence of a home office. And others are most productive in a group setting (even — gasp! — an office). We each have to figure out where we work best, and put ourselves there.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h3 How to 
+      em Get Gone
+      | , Part II:
+    h1 Communication
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 In an office, the #[strong.hugify assumption] is that you’re at work.
+
+    aside.notes
+      p Whether or not any actual work is being done, if you show up to an office, no one questions whether or not you’re at work. They just assume you’re in the office, so you must be working.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 Working remotely, #[em.hugify people wonder] if you’re actually working.
+
+    aside.notes
+      p If you don’t check in, managers, clients, and coworkers may mistake your silence for absence — and that may lead them to assume you’re wasting time.
+      p If you don’t make an effort to talk to your coworkers, you may give them the impression that you’re stand-offish or uninterested in their camaraderie.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h3 Remote workers must make extra efforts with communication to:
+    ul.align-center
+      li.fragment Show progress and presence.
+      li.fragment Maintain relationships with clients and coworkers.
+      li.fragment Not die of loneliness.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 Communication means:
+    ol
+      li.fragment
+        strong Check in at least once daily.
+        |  Let your team know what you’re working on so they don’t have to wonder (or ask).
+      li.fragment
+        strong Keep up casual relationships.
+        |  Spend time talking to your team about things that aren’t work-related.
+      li.fragment
+        strong Reach out to clients first.
+        |  If a client has to ask what you’re working on, it’s already too late.
+
+    aside.notes
+      p I hate reaching out to clients without something to show them. I want to put it off: “I’ll reach out to them once I get this phase done.”
+      p The problem is that a few days for me feels like nothing; a few days for a client or manager who’s heard #[em literally] nothing from me feels like a lifetime.
+      p [The mechanic analogy.]
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 Use the
+      em.hugify.alright-calm-down-a-little Agile Stand-Up
+    h3 & Answer These 3 Questions:
+    ul
+      li.fragment
+        strong What did you do yesterday?
+        |  This keeps everyone aware of what you’re accomplishing.
+      li.fragment
+        strong What will you do today?
+        |  Set out your one big todo for the day.
+      li.fragment
+        strong What do you need before you can get it done?
+        |  If you need help, or resources, or anything else before you can start, make that clear.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 Make time for 
+      em.hugify friendly
+      |  team chatter:
+    ul
+      li.fragment
+        strong Use an #off-topic Slack channel.
+        |  Create a space to share GIFs, make jokes, and talk about things that aren’t work-related.
+      li.fragment
+        strong Have friendly video calls.
+        |  At least once a month, have a video call with no agenda. Catch up with your team and take time to be friendly.
+      li.fragment
+        strong Create opportunities for in-person meet-ups.
+        |  At least once a year try to get the whole team in once place to spend time together.
+
+    aside.notes
+      p There’s no water cooler or break room for remote workers, so casual, friendly conversation requires an effort.
+      p If it’s possible to get together in person for occasional events — like a dinner or drinks — do it.
+      p This is just as applicable for clients as it is for coworkers. Most of my best clients are also friends in some capacity, and maintaining our friendships helps eliminate some of the awkward tension that could otherwise come up in the course of business. Of course, there aren’t as many opportunities to bring your clients together to hang out, so take advantage of any chance you get to become more than just “the person who deals with angry client emails”.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h3 How to 
+      em Get Gone
+      | , Part III:
+    h1
+      span.hugify Self-
+      | Promotion
+
+
+  //---------------------------------------------------------------------------
+
+  +slide.light-text(data-background="url(img/cheerleaders.gif)")
+    h2
+      br
+      br
+      br
+      br
+      br
+      br
+      br
+      br
+      | Very few of us have cheerleaders.
+
+    aside.notes
+      p There probably isn’t someone making a point of telling people when we do a good job. No one is going out of their way to sing our praises — at least not on a regular basis.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 There are many great
+      em.hugify.alright-calm-down-a-little.fader
+        span.fragment.current-fragment.current-visible developers
+        span.fragment designers
+        span.fragment writers
+      |  who are so shy we’ll #[strong.hugify never know] how talented they are.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 If you want location-independence,
+      em tasteful self-promotion
+      |  is your most important tool.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide(data-background="url(img/big-deal.gif)")
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 Self-Promotion Means:
+    ul
+      li.fragment
+        strong Make our managers aware of our contributions.
+        |  It’s not enough to simply #[em do our jobs]; we have to make sure the people paying us know how we contribute.
+      li.fragment
+        strong Become a resource for our team.
+        |  Be helpful and prove you’re a valuable member of the team. Make sure your coworkers see you as a huge asset.
+      li.fragment
+        strong Solve your clients’ problems.
+        |  Don’t make your clients solve problems that they’d rather pay you to solve. Become their “go-to gal/guy” for making things happen.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 Master the 
+      em.hugify.alright-calm-down-a-little #humblebrag
+      |  (without being a dick).
+    ul
+      li.fragment
+        strong Ask for more work.
+        |  Show what you’re capable of by finishing projects early and asking for the next project ahead of schedule.
+      li.fragment
+        strong Give 110%.
+        |  Go above and beyond on projects to add cool features. (Just remember to finish the project #[em before] starting extras.)
+
+    aside.notes
+      p The trick is to draw attention to your abilities by #[em showing] what you can do, rather than #[em telling] people.
+      p When adding extra features, make sure they’re not crazy — you don’t want to set the expectation that you add huge bonuses for free — and never let them hold up the project. Finish it as a launch-ready product, and then pull a new branch and play with extras if there’s time before the deadline.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 Become the 
+      em.hugify resident genius
+      |  on your team.
+    ul
+      li.fragment
+        strong Take the hardest tasks.
+        |  Show you’re a strong contributor by taking on the most challenging tasks in a project.
+      li.fragment
+        strong Teach and mentor.
+        |  Make yourself available to your team as a resource for teaching them new concepts.
+
+    aside.notes
+      p When taking tasks, don’t commit to something that you can’t deliver. My rule of thumb is “what I know + 10%”.
+      p Teach, but don’t condescend. You want to be a resource, not a prick. Remember that while you know more about #[em this] topic than someone else, you probably know #[em a whole lot less] about many other topics.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 Become
+      em.hugify a fixer
+      |  for clients.
+    ul
+      li.fragment
+        strong Don’t avoid tasks that aren’t strictly “your job”.
+        |  If a client needs something done, do it if you can. Doesn’t matter if that’s what they hired you for.
+      li.fragment
+        strong Offer all the advice you have — for free.
+        |  Never work for free, but talk is extremely cheap. Share your expertise with clients and leads and watch the business pile up.
+
+    aside.notes
+      p In mafia movies, a “fixer” is the guy who can be relied on to solve problems — #[em no matter what] they may be. Bodyguard? No problem. Date for an important person‘s spouse? He’ll get his suit pressed. Hide a body? In the usual spot, or somewhere new?
+      p If our clients can bring us #[em any] problem related to their business, they’ll not only trust us with a huge amount of business, but we’ll have long-lasting trust that creates an intensely valuable referral network.
+      p Sharing advice is hugely valuable. I will tell you #[em everything I know] right now, if you’re willing to sit and listen, because I know that my knowledge is only a part of why I’m valuable. I’m valuable because I can #[em execute] on that knowledge, and I have a style that’s uniquely mine. People pay me for execution and style; knowledge is a foregone conclusion. So sure: let me tell you #[em exactly] how to solve that problem. Then you can hire me to implement the solution I’ve just handed you.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h1 
+      span.hugify Work
+      |  is still
+      span.hugify
+        strong work
+        | .
+
+    aside.notes
+      p None of what I’ve talked about today matters if you can’t deliver an excellent end product.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 Freelancers have to
+      em.hugify stay curious
+      | & keep learning.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 Working from the beach sounds fun and all, but&hellip;
+    h3.fragment &hellip;you still have to, y’know, #[em work].
+
+    aside.notes
+      p And I hate to be the bearer of bad news, but it's actually WORSE to do it at the beach, because you'd much rather be doing beach things than tapping on your laptop. Also, there’s sand.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h1 Remote work is 
+      em.hugify.alright-calm-down-a-little intensely
+      |  rewarding.
+    p.fragment We have autonomy, 
+      span.fragment ownership, 
+      span.fragment challenge, 
+      span.fragment and freedom.
+
+    aside.notes
+      p Autonomy — we’re on our own to get things done.
+      p Ownership — our tasks are clearly our own. Effective remote work requires measuring results instead of merely tracking time.
+      p Challenge — it’s much harder to just coast as a remote worker.
+      p Freedom — if you finish your todo list, the rest of your day is YOURS to do whatever you want with. No commute. No timed breaks.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2 Remote work is a way#[br]to return work to its 
+      em.hugify proper place
+      |  in our lives.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h3 Because we don’t live to work.
+      em.hugify.fragment We work to live.
+
+    aside.notes
+      p Work should be a tool that we use to build better lives for ourselves.
+      p Work should NOT be our reason to live. It should not be an obstacle keeping us from spending time with the people we care about, or doing other things that we enjoy.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h1 I’m sick of the 
+      span.hugify
+        strong hustle
+        br
+        | & grind.
+
+    aside.notes
+      p We’ve been putting up with extra hours "for the sake of the cause" for too long
+      p We’ve been sacrificing our personal lives to "be part of something bigger" for too long
+      p We shouldn’t have to choose between a lucrative, fulfulling career and a meaninful, fulfilling life.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h1 I’m 
+      em Post-Hustle
+      | .
+
+    aside.notes
+      p I choose to work hard enough to support my lifestyle, and no harder.
+      p I choose to plan my personal time first, and fit work around that.
+      p I choose to succeed in my career, but only as far as it’s possible without sacrificing my personal life.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h2
+      em.hugify Remote work
+      |  gives me that freedom.
+
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h3 It can give #[em you] that freedom, too.
+
+
+  //- 
+    BUILT
+      - Introduce remote work: the ultimate dream.
+        + Photos of DN-style travel porn: work on a beach! work in pajamas!
+      - Brag a little: my current contract.
+      - Why isn’t everyone doing this?
+      - It's easy to blame our jobs
+        + Sometimes that's true: a lot of companies don't want their team away
+          from the office.
+        + Most times, blaming our jobs is just an excuse.
+      - If your job is done using a computer, there's a 95% chance you can do
+        it from anywhere.
+        + I've met lawyers, accountants, financial advisors, and even 
+          marriage counselors who work entirely remotely — it's possible.
+      - So if it's not the job, what's in the way?
+      - We are.
+        + If we want to be remote workers, we don't get to be JUST designers or
+          developers.
+        + We have to be managers, communicators, and propagandists as well.
+      - How to get there, part I: self-management.
+        + In an office, there's someone around to check in, keep you on task,
+          or see that you're struggling and ask if you need a hand.
+        + If you're working remotely, that person is you.
+          * If you don't stay on task, no one will give you a reminder — you'll
+            just get fired for missing deadlines.
+          * If you keep getting distracted, no one nudges you to get back on
+            track — you just have to stay up until 4am because you wasted so 
+            much time fucking around during the day.
+          * If you run into a problem, no one will notice you struggling and 
+            offer to help — you have to either seek help or find a solution on 
+            your own.
+        + Effective remote work means...
+          * Time management skills (front-loading)
+          * Proper focus and prioritization (time-boxing)
+          * Confidence to seek out solutions to challenges...
+          * ...with the humility to ask for help when needed.
+      - How to get there, part II: communication.
+        + In an office, no one wonders whether or not you're working.
+          * If you show up, your presence is noted and your productivity is
+            assumed.
+        + If you're working remotely, you have to remind people you exist.
+          * If you're too quiet, managers and coworkers may mistake your 
+            silence for absence — and they might assume you're wasting time.
+          * If you don't check in, you may give off the impression that you
+            don't care about your job or coworkers.
+        + Effective remote work means...
+          * Regular check-ins: what did you do yesterday? what will you do 
+            today? do you need anything to get it done? (Agile stand-up)
+          * Maintaining relationships: there's no water cooler or break room
+            for remote workers, so casual, friendly conversation requires an
+            effort. (Use an off-topic Slack channel for friendly chatter, or 
+            video calls to have a "catch-up" call every so often.)
+      - How to get there, part III: propaganda
+        + Unfortunately, very few of us have cheerleaders or champions to 
+          tell everyone how great we are.
+        + Some of the best programmers I know are so quiet that I would never
+          have known they were skilled unless I'd reviewed their code
+        + If you want to become a remote worker, (tasteful) self-promotion is
+          your most important tool.
+          * For our bosses, it means we have to implement our management and
+            communication skills, AND we have to draw attention to it.
+            * "Hey, boss, I wanted to see what I should work on next. That 
+              project you gave us earlier was scheduled to take two weeks, but
+              I took a look and was able to get through it already."
+          * For our coworkers, it means becoming a resource. Be helpful and 
+            prove your value as a great team member and excellent resource.
+            * However, avoid becoming the company's trash can. Don't let people
+              dump work on you; just help them spot solutions and leave them to
+              actually implement those solutions.
+          * For our clients...
+    TKTK
+      - And, of course, you need to be good at your job.
+        * None of this really matters if you can't deliver excellent work.
+        * Stay curious, keep learning, and don't get complacent.
+      - WRAP UP
+      - Don't forget, remote work is still work.
+        * "Working from the beach" sounds fun, but remember that you still have
+          to do your job.
+        * It's actually WORSE to do it at the beach, because you'd much 
+          rather be doing beach things than tapping on your laptop.
+      - Remote work helps make work rewarding:
+        * Autonomy — we're on our own to get things done.
+        * Ownership — our tasks are clearly our own. Effective remote work 
+          requires measuring results instead of merely tracking time.
+        * Challenge — it's much harder to just coast as a remote worker.
+        * Freedom — if you finish your todo list, the rest of your day is YOURS
+          to do whatever you want with. No commute. No timed breaks.
+      - Remote work is a way to return work to its rightful place in our lives.
+        * We don't live to work; we work to live.
+        * Work should be a tool that we use to build better lives for 
+          ourselves.
+        * Work should NOT be our reason to live. It should not be an obstacle
+          keeping us from spending time with the people we care about, or doing
+          other things that we enjoy.
+      - I'm sick of Hustle & Grind
+        * We've been putting up with extra hours "for the sake of the cause"
+          for too long
+        * We've been sacrificing our personal lives to "be part of something
+          bigger" for too long
+        * We shouldn't have to choose between a lucrative, fulfulling career 
+          and a meaninful, fulfilling life.
+      - I'm Post-Hustle
+        * I choose to work hard enough to support my lifestyle, and no harder.
+        * I choose to plan my personal time first, and fit work around that.
+        * I choose to succeed in my career, but only as far as it's possible
+          without sacrificing my personal life.
+      - Remote work allows me to make that choice.
+        * And it can allow you to make your own choices as well.
+
+  //---------------------------------------------------------------------------
+
+  +slide
+    h1
+      span.hugify Thank You
+    p
+      small (Let&rsquo;s be friends on Twitter.)
+
+
+  //---------------------------------------------------------------------------
+
+  +slide.resourcetext
+   h1 Resources:
+   ol
+    li
+      a(href="https://lengstorf.com/how-to-become-location-independent/").
+        How to Become Location-Independent
+    li
+      a(href="https://lengstorf.com/convince-your-boss-remote-work/").
+        How to Convince Your Boss to Let You Work Remotely
+
+
+block extras
+  .hashtag
+    - var intent = 'https://twitter.com/intent/tweet?text=';
+    - var tweetText = title + ' by @' + twitterHandle;
+    - var encodedText = encodeURIComponent(tweetText);
+    - var tweetHashtags = '&amp;hashtags=' + hashtag;
+    - var tweetRelated = '&amp;related=' + twitterHandle;
+    - var tweetLink = '&amp;url=' + twitterLink;
+    - var tweetUrl = intent + encodedText + tweetHashtags + tweetRelated + tweetLink;
+    p.
+      Tweet:
+      #[a(href=tweetUrl target="_blank") @#{twitterHandle} ##{hashtag}]
+  footer
+    ul.inline
+      li.
+        &ldquo;#{title}&rdquo; by #[a(href=authorLink) #{author}]
+      li
+        a(href="https://twitter.com/"+twitterHandle).
+          @#{twitterHandle}
+      li
+        a(href="https://github.com/"+githubHandle).
+          github.com/#{githubHandle}
+
+block defaultscripts
+  script(src="lib/js/head.min.js")
+  script(src="js/reveal.js")
+  script.
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      width: 1240,
+      height: 700,
+      controls: true,
+      progress: false,
+      history: true,
+      center: true,
+      transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+      //- multiplex: {
+      //-     // Example values. To generate your own, see the socket.io server instructions.
+      //-     secret: '14665332422731354426', // Obtained from the socket.io server. Gives this (the master) control of the presentation
+      //-     id: 'bbed52f062ca6416', // Obtained from socket.io server
+      //-     url: 'http://lengstorf.dev:1948' // Location of socket.io server
+      //- },
+
+      // Optional reveal.js plugins
+      dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/notes/notes.js', async: true },
+
+        //- { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
+        //- { src: 'plugin/multiplex/master.js', async: true },
+
+        //- // and if you want speaker notes
+        //- { src: 'plugin/notes-server/client.js', async: true },
+      ]
+    });
+
+block scripts
+  script(src="js/lengstorf.min.js")

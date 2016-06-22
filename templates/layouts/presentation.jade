@@ -1,0 +1,106 @@
+include ../includes/_mixins
+
+doctype html
+html(lang="en")
+
+  head
+    meta(charset="utf-8")
+
+    //- Make it appy!
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    )
+
+    //- Viewport settings
+    meta(
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    )
+
+    //- Meta information for the project
+    block title
+      title Your Presentation Title
+      meta(name="description" content="SEO-friendly meta description")
+      meta(name="author" content="Your Name")
+
+    //- Reveal styles
+    link(rel="stylesheet" href="css/reveal.css")
+
+    //- Syntax highlighting
+    link(rel="stylesheet" href="lib/css/zenburn.css")
+
+    //- Add extra styles using this block
+    block styles
+
+    //- Allows changing the presentation theme without modifying this template
+    block theme
+      link(rel="stylesheet" href="css/theme/black.css" id="theme")
+
+    //- Check if we're serving the PDF version for printing
+    script.
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+
+    <!--[if lt IE 9]>
+    script(src="lib/js/html5shiv.js")
+    <![endif]-->
+
+  body
+
+    .reveal
+
+      //- Any element inside this container is displayed as a slide
+      .slides
+
+        //- Use this block to add your own slides
+        block slides
+          +slide()
+            h1 Reveal.js + Jade
+            h3 A shortcut for faster slideshow authoring.
+            p
+              small.
+                Created by #[a(href=authorLink)= author] / 
+                #[a(href="https://twitter.com/" + twitterHandle)= "@" + twitterHandle]
+            p
+              small.
+                Ported to #[a(href="http://jade-lang.com") Jade] by 
+                #[a(href="http://lengstorf.com") Jason Lengstorf] / 
+                #[a(href="https://twitter.com/jlengstorf") jlengstorf]
+
+
+
+    //-
+      This block exists so you can add things like footers, hashtag reminders,
+      and anything else that helps the look of your slideshow that should be
+      visible on *every* slide.
+    block extras
+
+    block defaultscripts
+      script(src="lib/js/head.min.js")
+      script(src="js/reveal.js")
+      script.
+        // Full list of configuration options available at:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+          controls: true,
+          progress: true,
+          history: true,
+          center: true,
+          transition: 'slide', // none/fade/slide/convex/concave/zoom
+          // Optional reveal.js plugins
+          dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/zoom-js/zoom.js', async: true },
+            { src: 'plugin/notes/notes.js', async: true }
+          ]
+        });
+
+    block scripts
